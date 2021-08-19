@@ -86,6 +86,7 @@ public class Player : MonoBehaviour {
             myAnimator.SetTrigger("Die");
             isAlive = false;
             myRigidbody.velocity = deathKick;
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 }
